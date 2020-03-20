@@ -1,0 +1,29 @@
+{
+  "name": "CRUD-NODE-FIREBASE",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arosalesceja1997/CRUD-NODE-FIREBASE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arosalesceja1997/CRUD-NODE-FIREBASE/issues"
+  },
+  "homepage": "https://github.com/arosalesceja1997/CRUD-NODE-FIREBASE#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "firebase-admin": "^8.10.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
