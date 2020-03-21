@@ -1,3 +1,59 @@
-<div class="col.md-6 offset-md-3">
+<div class="col-md-8 offset-md-2">
+	<div class="card">
+    	<div class="card-header">
+    		<h1>	TASKS	<h1>
+    	</div>
+    	<div class="card-body" style="overflow-x: auto">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Firstname</th>
+                        <th scope="col">Lastname</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#if contacts}}
+                        {{#each contacts}}
+                            <tr>
+                                <th scope="row">{{firstname}}</th>
+                                <td>{{lastname}}</td>
+                                <td>{{email}}</td>
+                                <td>{{phone}}</td>
+                                <td>
+                                    <a href="/delete-contact/{{@key}}" class="btn btn-danger">
+                                        Delete
+                                    </a>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    {{else}}
+                        
+                    {{/if}}
+                </tbody>
+            </table>
+    	</div>
+    	<div class="card-footer">
+    		<form action="/new-contact" method="POST">
+    			<div class="form-group">
+    				<input type="text" name="firstname" placeholder="Firstname" class="form-control" autofocus/>
+    			</div>
+    			<div class="form-group">
+    				<input type="text" name="lastname" placeholder="Lastname" class="form-control"/>
+    			</div>
+    			<div class="form-group">
+    				<input type="text" name="email" placeholder="Email" class="form-control"/>
+    			</div>
+    			<div class="form-group">
+    				<input type="text" name="phone" placeholder="Phone" class="form-control"/>
+    			</div>
 
+    			<button class="btn btn-primary">
+    				Add
+    			</button>
+    		</form>
+    	</div>
+  	</div>
 </div>
